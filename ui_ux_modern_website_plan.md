@@ -149,7 +149,7 @@ UI 再好，如果文案生硬就沒有靈魂。
 
 ### 步驟 7.1：設定 Vite 與自動化部署
 **您的指令 (Prompt) 範例：**
-> 「我要將這個 Vue 專案部署到 GitHub Pages。請告訴我如何修改 `vite.config.ts` 的 `base` 設定 (假設我的 GitHub Repository 名稱是 'link-snap')。另外，請幫我寫一個 `.github/workflows/deploy.yml` 檔案，讓我在 Push code 到 main 分支時，GitHub Actions 能自動打包並部署到 gh-pages 分支。」
+> 「我要將這個 Vue 專案部署到 GitHub Pages。請告訴我如何修改 `vite.config.ts` 的 `base` 設定 (假設我的 GitHub Repository 名稱是 'linksnap-promax')。另外，請幫我寫一個 `.github/workflows/deploy.yml` 檔案，讓我在 Push code 到 master 分支時，GitHub Actions 能自動打包並部署到 gh-pages 分支。」
 
 ---
 
