@@ -22,7 +22,7 @@ const emit = defineEmits<{
       目前沒有儲存的網址
     </div>
 
-    <div v-else class="space-y-3 overflow-y-auto flex-1 pr-2 custom-scrollbar">
+    <div v-else class="space-y-3 overflow-y-auto overscroll-contain flex-1 pr-2 custom-scrollbar">
       <div v-for="item in savedLinks" :key="item.id" 
             class="font-mono text-xs p-3 bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50 rounded flex justify-between items-center group transition-colors cursor-pointer"
             @click="$emit('load', item.payload)"

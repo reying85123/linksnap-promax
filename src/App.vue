@@ -77,7 +77,7 @@ const loadPayload = (payload: string) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-bg-dark text-slate-100 p-4 md:p-8 flex items-center justify-center font-sans tracking-wide">
+  <div class="min-h-[100dvh] bg-bg-dark text-slate-100 p-4 py-8 md:p-8 flex items-start md:items-center justify-center font-sans tracking-wide">
     
     <!-- Bento Grid Container -->
     <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" :class="{ 'blur-sm pointer-events-none transition-all duration-300': showSaveModal || showDeleteModal }">
