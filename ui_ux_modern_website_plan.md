@@ -28,13 +28,34 @@ yarn create vite linksnap-promax --template vue-ts
 # 2. 進入資料夾
 cd linksnap-promax
 
-# 3. 安裝 Tailwind CSS (Vite 流程)
-yarn add -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+# 3. 安裝 Tailwind CSS v4 (Vite 流程)
+yarn add -D tailwindcss @tailwindcss/vite
 
 # 4. 安裝動畫庫與圖標庫
 yarn add @vueuse/motion @vueuse/core qrcode.vue lucide-vue-next clsx tailwind-merge
+```
 
+### 步驟 0.1.1：設定 Tailwind CSS v4
+在 Vite 專案中使用 Tailwind v4，必須修改 `vite.config.ts` 以及 CSS 進入點：
+
+1. **修改 `vite.config.ts`**：
+   ```typescript
+   import { defineConfig } from 'vite'
+   import vue from '@vitejs/plugin-vue'
+   import tailwindcss from '@tailwindcss/vite'
+
+   export default defineConfig({
+     plugins: [vue(), tailwindcss()],
+   })
+   ```
+
+2. **修改 CSS 檔案** (例如 `src/style.css`)：
+   全選並清空原內容，加入以下 Tailwind v4 的引入語法：
+   ```css
+   @import "tailwindcss";
+   ```
+
+```bash
 # 5. 啟動開發伺服器
 yarn dev
 ```
@@ -76,7 +97,7 @@ uipro init --ai antigravity
 
 ### 步驟 2.1：生成現代化配色與字體
 **您的指令 (Prompt) 範例：**
-> 「請為 LinkSnap 建立 Design System。風格要求：深色模式 (Dark Mode)，主色調使用 'Neon Cyan' (#06b6d4) 搭配 'Hot Pink' (#ec4899) 作為強調色。請提供 `tailwind.config.js`，包含霓虹光暈 (Glow) 的 box-shadow 設定與現代無襯線字體。」
+> 「請為 LinkSnap 建立 Design System，並使用 Tailwind CSS v4 的 `@theme` 語法在 CSS 檔案中配置。風格要求：深色模式 (Dark Mode)，主色調使用 'Neon Cyan' (#06b6d4) 搭配 'Hot Pink' (#ec4899) 作為強調色。請提供完整的 CSS 設定碼，包含霓虹光暈 (Glow) 的 box-shadow 設定與現代無襯線字體。」
 
 ### 步驟 2.2：定義元件風格 (Glassmorphism & Borders)
 **您的指令 (Prompt) 範例：**
