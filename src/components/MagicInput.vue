@@ -29,7 +29,7 @@ const activePlaceholder = placeholderTexts[Math.floor(Math.random() * placeholde
   <div class="col-span-1 md:col-span-7 flex flex-col justify-center space-y-6">
     <div>
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
-        Link<span class="text-brand-cyan drop-shadow-[0_0_10px_rgba(6,182,212,0.8)]">Snap</span>
+        Link<span class="text-brand-cyan drop-shadow-[0_0_10px_rgba(6,182,212,0.8)]">Snap </span><span class="text-brand-pink text-2xl drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]">v1</span>
       </h1>
       <p class="text-slate-400 text-lg font-light tracking-wide">隨時隨地，即刻產生與分享你的 QR Code。</p>
     </div>
